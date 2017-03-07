@@ -1,36 +1,75 @@
 ﻿using System;
 using dataradio.medium;
+using dataradio.core;
+using System.Collections.Generic;
 
 namespace dataradio.radio
-{
-    public class Radio : IReceiver
+{    public class Radio : ITransReceiver
     {
-        private string _id;
+        private Ilogger _Log;
+        private string _Id;
+        private List<ITransReceiver> _TransReceiversInRange = new List<ITransReceiver>();
 
-        public Radio()
+        public Radio(Ilogger log)
         {
-            if (string.IsNullOrWhiteSpace(_id))
+            if (string.IsNullOrWhiteSpace(_Id))
             {
-                _id = Guid.NewGuid().ToString();
+                _Id = Guid.NewGuid().ToString();
             }
+
+            _Log = log;
         }
 
-        public Radio(string id)
+        public Radio(string id, Ilogger log)
         {
-            _id = id;
+            _Id = id;
+            _Log = log;
         }
 
         public string ReceiverId
         {
             get
             {
-                return _id;
+                return _Id;
+            }
+            set
+            {
+                _Id = value;
             }
         }
 
-        public void ReceiveData(string data)
+        public List<ITransReceiver> TransReceiversInRange
         {
-            throw new NotImplementedException();
+            get
+            {
+                return _TransReceiversInRange;
+            }
+
+            set
+            {
+                _TransReceiversInRange = value;
+            }
+        }
+
+        public void Broadcast(IMedium medium, Packet packet)
+        {
+            _Log.Log($"Broadcast > { this._Id}", $"{packet.ToString()}", ConsoleColor.Red);
+            medium.Broadcast(packet, _TransReceiversInRange);
+        }
+
+        public int GetDelay()
+        {
+            return new Random().Next(20, 300);
+        }
+
+        public void ReceiveData(Packet packet, IMedium medium)
+        {
+            _Log.Log($"Receive > { this._Id}", $"{packet.ToString()}", ConsoleColor.Green);
+
+            if (packet.SourceId != _Id)
+            {
+                this._TransReceiversInRange.ForEach(t => t.Broadcast(medium, packet));
+            }
         }
     }
 }

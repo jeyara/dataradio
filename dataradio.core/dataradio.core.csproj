@@ -40,6 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IEnvironment.cs" />
+    <Compile Include="IMedium.cs" />
+    <Compile Include="ITransReceiver.cs" />
     <Compile Include="Loggers\ConsoleLogger.cs" />
     <Compile Include="Ilogger.cs" />
     <Compile Include="Packet.cs" />

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dataradio.core", "dataradio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dataradio.radio", "dataradio.radio\dataradio.radio.csproj", "{053C4B0A-3AA0-4C33-B549-8456E2AD9310}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dataradio.console", "dataradio.console\dataradio.console.csproj", "{77617286-B923-4679-9BE4-9E29C7166337}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{053C4B0A-3AA0-4C33-B549-8456E2AD9310}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{053C4B0A-3AA0-4C33-B549-8456E2AD9310}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{053C4B0A-3AA0-4C33-B549-8456E2AD9310}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77617286-B923-4679-9BE4-9E29C7166337}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77617286-B923-4679-9BE4-9E29C7166337}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77617286-B923-4679-9BE4-9E29C7166337}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77617286-B923-4679-9BE4-9E29C7166337}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
