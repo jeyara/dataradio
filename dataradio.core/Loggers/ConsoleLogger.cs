@@ -17,14 +17,14 @@ namespace dataradio.core
         public void Log(string source, Packet packet, ConsoleColor color)
         {
             Console.ForegroundColor = color;
-            var msg = $"[{DateTime.Now.ToString()}] [{source}] \t {packet.ToString()}";
+            var msg = $"[{DateTime.Now.ToString("hh:mm:ss.fff tt")}] [{source}] \t {packet.ToString()}";
             Console.WriteLine(msg);
         }
 
         public void Log(string source, string message, ConsoleColor color)
         {
             Console.ForegroundColor = color;
-            var msg = $"[{DateTime.Now.ToString()}] [{source}] \t {message}";
+            var msg = $"[{DateTime.Now.ToString("hh: mm:ss.fff tt")}] [{source}] \t {message}";
             Console.WriteLine(msg);
         }
     }
