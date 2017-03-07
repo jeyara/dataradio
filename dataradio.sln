@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dataradio.medium", "dataradio.medium\dataradio.medium.csproj", "{C85CF01B-C935-4BFF-A29E-BCA9905092B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dataradio.core", "dataradio.core\dataradio.core.csproj", "{FF231AEB-EBE1-4BB5-930A-FAF784FDB0AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dataradio.radio", "dataradio.radio\dataradio.radio.csproj", "{053C4B0A-3AA0-4C33-B549-8456E2AD9310}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C85CF01B-C935-4BFF-A29E-BCA9905092B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C85CF01B-C935-4BFF-A29E-BCA9905092B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C85CF01B-C935-4BFF-A29E-BCA9905092B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C85CF01B-C935-4BFF-A29E-BCA9905092B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF231AEB-EBE1-4BB5-930A-FAF784FDB0AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF231AEB-EBE1-4BB5-930A-FAF784FDB0AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF231AEB-EBE1-4BB5-930A-FAF784FDB0AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF231AEB-EBE1-4BB5-930A-FAF784FDB0AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{053C4B0A-3AA0-4C33-B549-8456E2AD9310}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{053C4B0A-3AA0-4C33-B549-8456E2AD9310}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{053C4B0A-3AA0-4C33-B549-8456E2AD9310}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{053C4B0A-3AA0-4C33-B549-8456E2AD9310}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
