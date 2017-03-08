@@ -10,12 +10,13 @@ namespace dataradio.core
         }
 
         public string SourceId { get; set; }
+        public string BroadcasterId { get; set; }
 
         public string Message { get; set; }
 
         public override string ToString()
         {
-            return $"From {SourceId} | Message {Message}";
+            return $"Broadcaster > {BroadcasterId} | From > {SourceId} | Message > {Message}";
         }
 
         public List<string> AckIds { get; set; }

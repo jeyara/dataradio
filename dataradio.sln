@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dataradio.radio", "dataradi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dataradio.console", "dataradio.console\dataradio.console.csproj", "{77617286-B923-4679-9BE4-9E29C7166337}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dataradio.medium.azurebus", "dataradio.medium.azurebus\dataradio.medium.azurebus.csproj", "{95DA40F8-C209-4ED5-B06A-CB456063D24F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dataradio.console2", "dataradio.console2\dataradio.console2.csproj", "{44C40A4A-6227-48DF-AF3A-19737A1242F9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{77617286-B923-4679-9BE4-9E29C7166337}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77617286-B923-4679-9BE4-9E29C7166337}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77617286-B923-4679-9BE4-9E29C7166337}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95DA40F8-C209-4ED5-B06A-CB456063D24F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95DA40F8-C209-4ED5-B06A-CB456063D24F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95DA40F8-C209-4ED5-B06A-CB456063D24F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95DA40F8-C209-4ED5-B06A-CB456063D24F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44C40A4A-6227-48DF-AF3A-19737A1242F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44C40A4A-6227-48DF-AF3A-19737A1242F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44C40A4A-6227-48DF-AF3A-19737A1242F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44C40A4A-6227-48DF-AF3A-19737A1242F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

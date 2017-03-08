@@ -9,6 +9,7 @@ namespace dataradio.radio
         private Ilogger _Log;
         private string _Id;
         private List<ITransReceiver> _TransReceiversInRange = new List<ITransReceiver>();
+        private Packet _LastPacket = null;
 
         public Radio(Ilogger log)
         {
@@ -55,6 +56,7 @@ namespace dataradio.radio
         {
             _Log.Log($"Broadcast > { this._Id}", $"{packet.ToString()}", LogLevel.Broadcast);
             medium.Broadcast(packet, _TransReceiversInRange);
+            _LastPacket = packet;
         }
 
         public int GetDelay()
@@ -64,13 +66,23 @@ namespace dataradio.radio
 
         public void ReceiveData(Packet packet, IMedium medium)
         {
-            _Log.Log($"Receive > { this._Id}", $"{packet.ToString()}", LogLevel.Receive);
-
             if (packet.SourceId != _Id && !packet.AckIds.Contains(this.ReceiverId))
             {
-               packet.AckIds.Add(this.ReceiverId);
-               this._TransReceiversInRange.ForEach(t => t.Broadcast(medium, packet));
+                _Log.Log($"Receive > { this._Id}", $"{packet.ToString()}", LogLevel.Receive);
+                packet.AckIds.Add(this.ReceiverId);
+                packet.BroadcasterId = this.ReceiverId;
+                _LastPacket = packet;
+                this.Broadcast(medium, packet);
             }
+            else
+            {
+                _Log.Log($"Ingored > { this._Id}", $"{packet.ToString()}", LogLevel.Spam);
+            }
+        }
+
+        public Packet GetLastPacket()
+        {
+            return _LastPacket;
         }
     }
 }

@@ -10,5 +10,6 @@ namespace dataradio.core
         void Broadcast(IMedium medium, Packet packet);
         int GetDelay();
         List<ITransReceiver> TransReceiversInRange { get; set; }
+        Packet GetLastPacket();
     }
 }
