@@ -53,7 +53,7 @@ namespace dataradio.radio
 
         public void Broadcast(IMedium medium, Packet packet)
         {
-            _Log.Log($"Broadcast > { this._Id}", $"{packet.ToString()}", ConsoleColor.Yellow);
+            _Log.Log($"Broadcast > { this._Id}", $"{packet.ToString()}", LogLevel.Broadcast);
             medium.Broadcast(packet, _TransReceiversInRange);
         }
 
@@ -64,7 +64,7 @@ namespace dataradio.radio
 
         public void ReceiveData(Packet packet, IMedium medium)
         {
-            _Log.Log($"Receive > { this._Id}", $"{packet.ToString()}", ConsoleColor.Green);
+            _Log.Log($"Receive > { this._Id}", $"{packet.ToString()}", LogLevel.Receive);
 
             if (packet.SourceId != _Id && !packet.AckIds.Contains(this.ReceiverId))
             {

@@ -19,11 +19,11 @@ namespace dataradio.medium
         {
             if (packet == null) return;
 
-            _log.Log("Medium Info", $"Broadcast from  {packet.SourceId}. In Range {string.Join(", ", to.Select(t=>t.ReceiverId).ToArray())}", ConsoleColor.White);
+            _log.Log("Medium Info", $"Broadcast from  {packet.SourceId}. In Range {string.Join(", ", to.Select(t=>t.ReceiverId).ToArray())}", LogLevel.Medium);
 
             to.ForEach(t => {
                 var delay = t.GetDelay();
-                _log.Log("Medium Info", $"Delay in transmission to {t.ReceiverId} ==> {delay}ms", ConsoleColor.White);
+                _log.Log("Medium Info", $"Delay in transmission to {t.ReceiverId} ==> {delay}ms", LogLevel.Medium);
                 Thread.Sleep(delay);
                 t.ReceiveData(packet, this);
             });
